@@ -1,32 +1,46 @@
 import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
+import Link from "next/link"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
+    <div className="relative min-h-[75vh] w-full border-b border-ui-border-base bg-ui-bg-subtle">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center p-4 small:p-32 gap-8">
+        <div className="max-w-2xl">
           <Heading
             level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
+            className="text-4xl md:text-5xl leading-tight text-ui-fg-base font-bold mb-4"
           >
             FPV.mx
           </Heading>
           <Heading
             level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
+            className="text-xl md:text-2xl leading-relaxed text-ui-fg-subtle font-normal mb-6"
           >
-            Need help customizing your store?
+            Tu destino definitivo para equipos y accesorios de drones FPV en México
           </Heading>
-        </span>
-        <a
-          href="https://funkyton.com/medusajs-2-0-is-finally-here/"
-          target="_blank"
-        >
-          <h1 style={{ textDecoration: "underline" }}>
-            Visit the tutorial
-          </h1>
-        </a>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/store">
+              <Button
+                variant="primary"
+                size="large"
+                className="min-w-[150px]"
+              >
+                Explorar Productos
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                variant="secondary"
+                size="large"
+                className="min-w-[150px]"
+              >
+                Contactar
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )
